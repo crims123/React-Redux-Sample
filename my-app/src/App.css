@@ -1,0 +1,35 @@
+.products{
+  margin-top: 10px;
+}
+.products__image{
+  width:250px;
+  height:220px;
+}
+.products__button{
+  background-color: rgb(26, 166, 247);
+  color:white;
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+.products__title{
+  font-size: 20px;
+  color:rgb(58, 58, 58);
+  font-weight: bold;
+}
+.cart{
+  background-color: rgb(211, 211, 211);
+  padding: 15px;
+  color: white;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+.cart__title{
+  font-size: 25px;
+}
+.cart__image{
+  width:100px;
+  height: 100px;
+}
