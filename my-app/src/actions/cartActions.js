@@ -1,8 +1,17 @@
+import {ADD_TO_CART, REMOVE_FROM_CART} from "../actions/types";
+
 const addToCart = (product)=>{
     return({
-        type:"ADD_TO_CART",
+        type:ADD_TO_CART,
         payload: product
     })
 }
 
-export {addToCart};
+const removeFromCart = (product)=>{
+    return({
+        type:REMOVE_FROM_CART,
+        payload: product
+    })
+}
+
+export {addToCart , removeFromCart};

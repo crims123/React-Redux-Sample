@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// Importamos el store y lo enviamos a todos los componentes por medio de props
+// Importamos el store y lo enviamos a todos los componentes por medio de props con un Provider
 import store from "./store";
 import {Provider} from "react-redux";
 

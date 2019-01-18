@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-
+import {removeFromCart} from "../../actions/cartActions";
+import {addToProducts} from "../../actions/productsActions";
 class Cart extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class Cart extends Component {
                   <tr key={product.id}>
                     <td><img className="cart__image" src={product.image}></img> </td>
                     <td className="text-right"><button className="btn btn-danger">$ {product.price}</button></td>
+                    <td className="text-right"><button onClick={()=>this.props.deleteProduct(product)} className="btn btn-danger">Delete </button></td>
                   </tr>
             )}
           </div>
@@ -28,4 +30,13 @@ const mapStateToProps = state =>{
       }
   )
 }
-export default connect(mapStateToProps,null) (Cart);
+
+const mapDispatchToProps = dispatch =>{
+  return {
+    deleteProduct(product){
+      dispatch(removeFromCart(product)); 
+      dispatch(addToProducts(product)); 
+    }
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps) (Cart);
