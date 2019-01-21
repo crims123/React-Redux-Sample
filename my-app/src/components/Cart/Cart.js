@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {connect} from "react-redux";
-import {removeFromCart} from "../../actions/cartActions";
-import {addToProducts} from "../../actions/productsActions";
+
 class Cart extends Component {
   render() {
     return (
@@ -23,20 +21,5 @@ class Cart extends Component {
   }
 }
 
-const mapStateToProps = state =>{
-  return(
-      {
-          cart: state.cart
-      }
-  )
-}
 
-const mapDispatchToProps = dispatch =>{
-  return {
-    deleteProduct(product){
-      dispatch(removeFromCart(product)); 
-      dispatch(addToProducts(product)); 
-    }
-  }
-}
-export default connect(mapStateToProps,mapDispatchToProps) (Cart);
+export default Cart;
